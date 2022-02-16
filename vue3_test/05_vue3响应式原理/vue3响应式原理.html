@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    let person = {
+      name: '张三',
+      age: 123
+    }
+
+    // let p={}
+    // Object.defineProperty(p, 'name', {
+    //   get () {
+    //     return person.name
+    //   },
+    //   set (val) {
+    //     person.name = val
+    //   }
+    // })
+    // Object.defineProperty(p, 'age', {
+    //   get () {
+    //     return person.age
+    //   },
+    //   set (val) {
+    //     person.age = val
+    //   }
+    // })
+
+    // vue3
+    const p = new Proxy(person, {
+      get (target, propKey) { },
+      set (target, propKey, val) { },
+      deleteProperty (target, propKey)
+    })
+  </script>
+</body>
+
+</html>
